@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Rika Cursors Showcase</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.6.0/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.6.0/dist/vuetify.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<!--        why are you here?           -->
+<!--        wanna see the code?         -->
+<!--        weirdo :\                   -->
+<body>
+    <div id="app">
+        <v-app>
+            <v-main style="background: linear-gradient(#0d1057,#505bac);">
+                <v-container class="text-center">
+                                      
+                    <h1 class="mb-10" style="color:#737ed0; font-family: Arial;">
+                        <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                        <v-icon size="xsmall">mdi-space-invaders</v-icon>   
+                        Rika Cursors
+                        <v-icon size="xsmall">mdi-space-invaders</v-icon> 
+                        <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                    </h1>
+                    <v-row>
+                        <v-col cols="12" sm="6" md="4" v-for="(cursor, index) in cursors" :key="index">
+                            <v-card class="pa-5" variant="tonal" >
+                                <div :style="{cursor: cursor}" class="pa-6">
+                                    <p style="color:#a8b3f1; font-size:24px;">{{ cursorText[index] }}</p>
+                                </div>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+
+                    <v-row>
+                        <!-- Update Infomation -->
+                        <v-col>                            
+                            <v-btn color="#0d1057" class="my-4" icon @click="showDialog[0] = true">
+                                <v-icon>mdi-information-variant</v-icon>
+                                <v-tooltip activator="parent" location="left">About this version</v-tooltip>
+                            </v-btn>
+                            <v-dialog v-model="showDialog[0]" max-width="800">
+                                <v-card title="Update Infomation" variant="flat" color="#8061d8">
+                                    <template v-slot:text>
+                                        <h4>2025/08/31 - Version 1.0 Release</h4>
+                                            <li>Add basic animation cursors</li>
+                                    </template>
+                                </v-card>
+                            </v-dialog>
+                        </v-col>
+                        <!-- Download -->
+                        <v-col>
+                            <v-btn color="#0d1057" class="my-4" icon href="https://drive.google.com/file/d/1wabnW8RNlUlrVzxei-KjwiLz1PtJz85a/view?usp=drive_link" target="_blank">
+                                <v-icon>mdi-download</v-icon>
+                                <v-tooltip activator="parent" location="left">Download Latest</v-tooltip>
+                            </v-btn>
+                        </v-col>
+                        <!-- Guide -->
+                        <v-col>
+                            <v-btn color="#0d1057" class="my-4" icon @click="showDialog[1] = true">
+                                <v-icon>mdi-help</v-icon>
+                                <v-tooltip activator="parent" location="left">How to install</v-tooltip>
+                            </v-btn>
+                            <v-dialog v-model="showDialog[1]" max-width="1000">
+                                <v-card title="Update Infomation" variant="flat" color="#8061d8">
+                                    <template v-slot:text>
+                                        <h4>2025/08/31 - Version 1.0 Release</h4>
+                                            <li>Add basic animation cursors</li>
+                                    </template>
+                                </v-card>
+                            </v-dialog>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+</body>
+
+<script>
+    const { createApp } = Vue;
+    const { createVuetify } = Vuetify;
+    const app = createApp({
+        data() {
+            return {
+                cursors: ["help","progress","wait","crosshair",
+                "text","not-allowed","ns-resize","ew-resize",
+                "nesw-resize","nwse-resize","move","pointer", 
+                 ],
+                cursorText:["Rika Helpsel", "Rika Working","Rika Busy","Rika Cross",
+                "Rika I-beam","Rika Unavail","Rika Ns","Rika Ew",
+                "Rika Nesw","Rika Nwse","Rika Move","Rika Link"
+                ],
+                showDialog: [false,false]
+            };
+        }
+    });
+    app.use(createVuetify());
+    app.mount("#app");
+</script>
+</html>
