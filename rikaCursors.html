@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Rika Cursors👾😈</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.6.0/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.6.0/dist/vuetify.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="icon" href="https://pbs.twimg.com/media/GzNhPDUboAAfmbI?format=jpg&name=large" type="image/png">
+</head>
+<!-- Welcome Bro -->
+<body id="jump1">
+    <div id="app">
+        <v-app>
+            <v-navigation-drawer class="d-none d-md-block" app permanent width="10%" location="top" style="background: linear-gradient(to right, #271874,#348fc9,#c7b8f1);">
+                <div>
+                    <v-list class="d-flex">
+                    <h1 style="color:#b6beff; font-family: Arial; margin-left: 150px; user-select: none;">
+                        <strong>
+                            <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                            <v-icon size="xsmall">mdi-space-invaders</v-icon>   
+                            Rika Cursors
+                            <v-icon size="xsmall">mdi-space-invaders</v-icon> 
+                            <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                        </strong>
+                    </h1>
+                    <v-spacer></v-spacer>
+                    <v-list-item prepend-icon="mdi-home" style="user-select: none; color:#ffffff" @click="scrollTo('jump1')" link>Top</v-list-item>
+                    <v-list-item prepend-icon="mdi-cursor-default" style="user-select: none; color:#ffffff" @click="scrollTo('jump2')" link>Showcast</v-list-item>
+                    <v-list-item prepend-icon="mdi-download" style="margin-right: 150px; user-select: none; color:#ffffff" @click="scrollTo('jump3')" link>Download</v-list-item>
+                </v-list>
+                </div>
+            </v-navigation-drawer>
+            <v-main
+                style="background:
+                    linear-gradient(to right, #c7b8f116, 1px, transparent 1px),
+                    linear-gradient(to bottom, #c7b8f116, 1px, transparent 1px),
+                    linear-gradient(#217cb5,#330a54);
+                    background-size: 25px 25px, 25px 25px, 100% 100%;
+                    background-attachment: fixed;">
+                <v-container class="text-center">
+                    <!-- information -->
+                    <v-row align="center" justify="center" style="margin-top:50px;">
+                        <v-col cols="auto" data-aos="fade-right">  <!-- AOS -->
+                            <v-card class="text-start" 
+                            prepend-icon="mdi-space-invaders"
+                            variant="flat" 
+                            color="#3d418c" 
+                            title="About Rika Cursors"
+                            max-width="550"
+                            style="user-select: none;">
+                                <v-card-text class="pt-4" style="background-color: #676bb1; user-select: text;">
+                                    This cursor comes in both animated and static versions, 
+                                    and also includes additional custom-designed mouse cursors. 
+                                    It was primarily created as fanart for the Vtuber 'Amamine Silv Angelica (Rika)', 
+                                    and this is also a birthday gift for her in 2025. 
+                                    Her birthday is on September 12th, Happy Birthday Rika!
+                                </v-card-text>
+                            </v-card>
+                            <!-- GIF -->
+                             <v-card width="550"
+                                height="400"
+                                variant="text" 
+                                class="d-none d-md-block"
+                                style="margin-top:20px;">
+                                <v-img src="./Fanart.gif"
+                                    max-width="550"
+                                    style="margin-top:20px;"></v-img>
+                            </v-card>
+                            <v-card max-width="100%"
+                                variant="text" 
+                                class="d-block d-md-none"
+                                style="margin-top:20px;">
+                                <v-img src="./Fanart.gif"
+                                    max-width="550"
+                                    style="margin-top:20px;"></v-img>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="auto" data-aos="fade-left">  <!-- AOS -->
+                            <v-card class="text-start" 
+                            prepend-icon="mdi-emoticon-devil"
+                            variant="flat" 
+                            color="#3d418c" 
+                            title="About Rika"
+                            max-width="550"
+                            style="user-select: none;">
+                                <v-card-text class="pt-4" style="background-color: #676bb1; user-select: text;">
+                                    Rika is a Vtuber belonging to the group seVens-Tri. 
+                                    She is a lively girl with big dreams and a strong love for gaming. 
+                                    In addition to Japanese, she can also speak English and German. 
+                                    Beyond games, she enjoys many interesting things. 
+                                    If you'd like to learn more, feel free to subscribe to her and follow her!
+                                </v-card-text>
+                            </v-card>
+                            <div class="d-none d-md-block">
+                                <v-card width="550"
+                                    height="400"
+                                    variant="text" 
+                                    style="margin-top:20px;"
+                                    class="d-flex flex-column align-center justify-center ga-4">
+                                    
+                                    <v-hover>
+                                        <template v-slot:default="{ isHovering, props }">
+                                            <v-card v-bind="props"
+                                                :color="isHovering ? 'default' : '#ff0033'"
+                                                append-icon="mdi-open-in-new"
+                                                class="mx-auto d-none d-md-block"
+                                                href="https://www.youtube.com/@AMAMINESilvAngelica"
+                                                width="300"
+                                                prepend-icon="mdi-youtube"
+                                                rel="noopener"
+                                                subtitle="@AMAMINESilvAngelica"
+                                                target="_blank"
+                                                title="Subscribe">
+                                            </v-card>
+                                        </template>
+                                    </v-hover>
+                                    </v-hover>
+                                    <v-hover>
+                                        <template v-slot:default="{ isHovering, props }">
+                                            <v-card v-bind="props"
+                                                :color="isHovering ? 'default' : '#1da1f2'"
+                                                append-icon="mdi-open-in-new"
+                                                class="mx-auto d-none d-md-block"
+                                                href="https://x.com/AMAMINESilv"
+                                                width="300"
+                                                prepend-icon="mdi-twitter"
+                                                rel="noopener"
+                                                subtitle="@AMAMINESilv"
+                                                target="_blank"
+                                                title="Follow">
+                                            </v-card>
+                                        </template>
+                                    </v-hover>
+                                    <!-- <v-hover>
+                                        <template v-slot:default="{ isHovering, props }">
+                                            <v-card v-bind="props"
+                                                :color="isHovering ? 'default' : '#fc4d50'"
+                                                append-icon="mdi-open-in-new"
+                                                class="mx-auto d-none d-md-block"
+                                                href="https://sevens-tri.booth.pm/items/7411886"
+                                                width="300"
+                                                prepend-icon="mdi-cart"
+                                                rel="noopener"
+                                                subtitle="Fan share, no commercial gain"
+                                                target="_blank"
+                                                title="Birthday Goods">
+                                            </v-card>
+                                        </template>
+                                    </v-hover> -->
+                                </v-card>
+                            </div>
+                        </v-col>
+                    </v-row>
+                    <v-row class="d-block d-md-none">
+                        <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn v-bind="props"
+                                    :color="isHovering ? 'default' : '#ff0033'"
+                                    variant="flat"
+                                    icon
+                                    size="x-large"
+                                    rel="noopener"
+                                    target="_blank" 
+                                    href="https://www.youtube.com/@AMAMINESilvAngelica">
+                                        <v-icon 
+                                        v-bind="props"
+                                        :color="isHovering ? '#ff0033' : 'default'"
+                                        icon="mdi-youtube" 
+                                        size="x-large">
+                                        </v-icon>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                        </v-col>
+                        <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn v-bind="props"
+                                    :color="isHovering ? 'default' : '#1da1f2'"
+                                    variant="flat"
+                                    icon 
+                                    size="x-large"
+                                    rel="noopener"
+                                    target="_blank" 
+                                    href="https://x.com/AMAMINESilv">
+                                        <v-icon 
+                                        v-bind="props"
+                                        :color="isHovering ? '#1da1f2' : 'default'"
+                                        icon="mdi-twitter" 
+                                        size="x-large">
+                                        </v-icon>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                        </v-col>
+                        <!-- <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn v-bind="props"
+                                    :color="isHovering ? 'default' : '#fc4d50'"
+                                    variant="flat"
+                                    icon 
+                                    size="x-large"
+                                    rel="noopener"
+                                    target="_blank" 
+                                    href="https://sevens-tri.booth.pm/items/7411886">
+                                        <v-icon 
+                                        v-bind="props"
+                                        :color="isHovering ? '#fc4d50' : 'default'"
+                                        icon="mdi-cart" 
+                                        size="x-large">
+                                        </v-icon>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                        </v-col> -->
+                    </v-row>
+                   
+                    <!-- showcase -->
+                    <h2 class="ma-14 d-none d-md-block" style="color:#b6beff; font-family: Arial; user-select: none;" id="jump2">
+                        Showcase
+                        <v-tooltip location="top" text="You have to install cursors first :\">
+                            <template v-slot:activator="{ props }">
+                                <v-btn icon density="comfortable" variant="text" v-bind="props">
+                                    <v-icon icon="mdi-information"></v-icon>
+                                </v-btn>
+                            </template>
+                        </v-tooltip>
+                    </h2>
+                    <div class="d-none d-md-block">
+                        <v-row data-aos="fade-up">  <!-- AOS -->
+                            <v-col cols="auto" sm="6" md="4" v-for="(cursor, index) in cursors" :key="index">
+                                <v-card class="pa-5" variant="tonal" style="user-select: none;">
+                                    <div :style="{cursor: cursor}" class="pa-6">
+                                        <p style="color:#b6beff; font-size:24px;">
+                                            <v-icon size="xsmall">mdi-space-invaders</v-icon>   
+                                            {{ cursorText[index] }}
+                                            <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                                        </p>
+                                    </div>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </div>
+                    <h2 class="ma-14" style="color:#b6beff; font-family: Arial; user-select: none;" id="jump3">Download</h2>
+                    <v-row data-aos="fade-up">  <!-- AOS -->
+                        
+                        <!-- Download -->
+                        <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn 
+                                    v-bind="props"
+                                    :color="isHovering ? '#baf8ff' : '#250d57'"
+                                    variant="flat"
+                                    class="my-4" 
+                                    icon size="x-large" 
+                                    @click="showDialog[0] = true">
+                                        <v-icon>mdi-information-variant</v-icon>
+                                        <v-tooltip activator="parent" location="top">Update Infomation</v-tooltip>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                            <v-dialog v-model="showDialog[0]" max-width="800">
+                                <v-card prepend-icon="mdi-history" title="Update Infomation" variant="flat" color="#2e1f56">
+                                    <v-card-text class="text-start pt-4" style="background-color: #514476;">
+                                        <!-- add info here -->
+                                        <h4 style="color:#f27efd;">Sep. 10, 2025 - Version 1.4.0 Released</h4>
+                                        <li>Fixed 'Rika_Unavail' cursor design</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 06, 2025 - Version 1.3.3 Released</h4>
+                                        <li>Fixed 'Rika_Ew' animation issue</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 05, 2025 - Version 1.3.2 Released</h4>
+                                        <li>Fixed 'Rika_Arrow' animation issue</li>
+                                        <li>Fixed 'Rika_Nwse' animation issue</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 03, 2025 - Version 1.3.1 Released</h4>
+                                        <li>Added extra cursor 'Rika_(s)Only'</li>
+                                        <li>Added extra cursor 'Rika_Only'</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 03, 2025 - Version 1.3.0 Released</h4>
+                                        <li>Added extra cursor 'Rika_(e)Ew'</li>
+                                        <li>Added extra cursor 'Rika_(e)Move'</li>
+                                        <li>Added extra cursor 'Rika_(e)Nesw'</li>
+                                        <li>Added extra cursor 'Rika_(e)Ns'</li>
+                                        <li>Added extra cursor 'Rika_(e)Nwse'</li>
+                                        <li>Fixed 'Rika_Helpsel' cursor design</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 02, 2025 - Version 1.2.0 Released</h4>
+                                        <li>Added cursors 'only cursors'</li>
+                                        <li>Fixed 'Rika_Up' cursor design</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Sep. 01, 2025 - Version 1.1.0 Released</h4>
+                                        <li>Added basic static cursors</li>
+                                        <br>
+                                        <h4 style="color:#f27efd;">Aug. 31, 2025 - Version 1.0.0 Released</h4>
+                                        <li>Added basic animation cursors</li>
+                                    </v-card-text>
+                                </v-card>
+                            </v-dialog>
+                        </v-col>
+                        <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn 
+                                    v-bind="props"
+                                    :color="isHovering ? '#c7b8f1' : '#250d57'"
+                                    variant="flat"
+                                    class="my-4" 
+                                    icon 
+                                    size="x-large" 
+                                    rel="noopener"
+                                    target="_blank"
+                                    href="https://drive.google.com/file/d/1wabnW8RNlUlrVzxei-KjwiLz1PtJz85a/view?usp=drive_link" >
+                                        <v-icon>mdi-download</v-icon>
+                                        <v-tooltip activator="parent" location="top">Download Latest</v-tooltip>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                        </v-col>
+                        <!-- Guide -->
+                        <v-col>
+                            <v-hover>
+                                <template v-slot:default="{ isHovering, props }">
+                                    <v-btn 
+                                    v-bind="props"
+                                    :color="isHovering ? '#b0dffd' : '#250d57'"
+                                    variant="flat"
+                                    class="my-4" 
+                                    icon 
+                                    size="x-large" 
+                                    @click="showDialog[1] = true">
+                                        <v-icon>mdi-help</v-icon>
+                                        <v-tooltip activator="parent" location="top">Guide</v-tooltip>
+                                    </v-btn>
+                                </template>
+                            </v-hover>
+                            <v-dialog v-model="showDialog[1]" max-width="800">
+                                <v-stepper alt-labels :items="['Step 1', 'Step 2', 'Step 3', 'Step 4']" bg-color="#514476" height="500px">
+                                    <template v-slot:item.1>
+                                        <v-card title="Download and Unzip" flat color="#514476" height="290px">
+                                            <v-card-text>Download and unzip the files, 
+                                            then move the folder into C:\Windows\Cursors.<br><br>
+                                                <div class="text-caption">
+                                                Note: If the folder is not placed in this directory, 
+                                                Windows may not be able to locate the cursor files after a reboot, 
+                                                causing your custom cursors to reset to default.<br>
+                                                </div>
+                                                </v-card-text>
+                                                <v-divider></v-divider>
+                                                <v-card-text>
+                                                ファイルをダウンロードして解凍し、フォルダをC:\Windows\Cursorsに移動します。<br><br>
+                                                <div class="text-caption">
+                                                注意：もしフォルダをこのディレクトリに置かない場合、再起動後に Windows がカーソルファイルを見つけられず、カスタムカーソルが初期状態に戻ってしまう可能性があります。
+                                                </div>
+                                            </v-card-text>
+                                        </v-card>
+                                    </template>
+                                        
+                                    <template v-slot:item.2>
+                                        <v-card title="Settings" flat color="#514476" height="290px">
+                                            <v-card-text>
+                                                Go to Settings → Devices → Mouse.
+                                            </v-card-text>
+                                            <v-divider></v-divider>
+                                            <v-card-text>
+                                                設定 → デバイス → マウス に移動します。
+                                            </v-card-text>
+                                        </v-card>
+                                    </template>
+                                
+                                    <template v-slot:item.3>
+                                        <v-card title="Size Settings" flat color="#514476" height="290px">
+                                            <v-card-text>
+                                                Click (Adjust mouse & cursor size). 
+                                                Here you can change the cursor size. 
+                                                It is recommended to set the pointer size between 1 and 3, 
+                                                with 3 being the original size (64x64).
+                                            </v-card-text>
+                                            <v-divider></v-divider>
+                                            <v-card-text>
+                                                「マウスとカーソルのサイズを調整する」をクリックします。<br>
+                                                ここでカーソルのサイズを変更できます。<br>
+                                                ポインターのサイズは 1〜3 の間で設定することを推奨します。3 が元のサイズ (64x64) です。
+                                            </v-card-text>
+                                        </v-card>
+                                    </template>
+
+                                    <template v-slot:item.4>
+                                        <v-card title="Cursors Settings" flat color="#514476" height="290px">
+                                            <v-card-text>
+                                                Return to Settings → Devices → Mouse, 
+                                                then click (Additional mouse options) 
+                                                to start customizing your cursors.
+                                            </v-card-text>
+                                            <v-divider></v-divider>
+                                            <v-card-text>
+                                                設定 → デバイス → マウス に戻り、「その他のマウス オプション」をクリックして、カーソルのカスタマイズを開始します。
+                                            </v-card-text>
+                                        </v-card>
+                                    </template>
+                                </v-stepper>
+                            </v-dialog>
+                        </v-col>
+                    </v-row>
+                    
+                </v-container>
+                <v-footer class="text-center d-flex flex-column ga-2 py-4" color="#1d104c" style="margin-top:100px;">   
+                    <h2 style="color:#ffffff; font-family: Arial; user-select: none;">
+                        <strong>
+                            Rika Cursors
+                        </strong>
+                    </h2>
+                    <v-divider thickness="2" width="150"></v-divider>
+                    <div class="text-caption opacity-50" >
+                        This is the footer.
+                        All the useless information lives here.
+                        Nobody ever pays attention to what's written down here, me included.<br>
+                        But I have to put something in the footer, 
+                        otherwise the page doesn't look professional. <br>
+                        Anyway, if you have any issues, 
+                        feel free to reach out to me on Twitter, 
+                        or just leave a comment under the tweet.<br>
+                        And if you like this fanart, I would be happy.<br>
+                        Last but not least, this is just a fanart, 
+                        use it or not, absolutely no pressure.<br>
+                        After all, not everyone prefers using overly flashy cursors :D
+                    </div>
+                    <v-btn icon="mdi-twitter" density="comfortable" variant="tonal" rel="noopener" target="_blank" href="https://x.com/L3_M47hi4s"></v-btn>
+                </v-footer>
+                <v-footer class="text-center d-flex flex-column ga-2 py-2" color="#0d052c" >
+                    <div style="user-select: none;">
+                        2025 - <strong>LeMathias</strong>
+                    </div>
+                    </v-footer>
+            </v-main>
+        </v-app>
+    </div>
+</body>
+<script>
+    
+    const { createApp } = Vue;
+    const { createVuetify } = Vuetify;
+    const app = createApp({
+        data() {
+            return {
+                cursors: ["help","progress","wait","crosshair",
+                "text","not-allowed","ns-resize","ew-resize",
+                "nesw-resize","nwse-resize","move","pointer", 
+                 ],
+                cursorText:["Rika Helpsel", "Rika Working","Rika Busy","Rika Cross",
+                "Rika I-beam","Rika Unavail","Rika Ns","Rika Ew",
+                "Rika Nesw","Rika Nwse","Rika Move","Rika Link"
+                ],
+                showDialog: [false,false]
+            };
+        },
+        methods: {
+            scrollTo(targetId) {
+                const el = document.getElementById(targetId);
+                if (el) {
+                    el.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                    });
+                }
+            }
+        }
+    });
+    app.use(createVuetify());
+    app.mount("#app");
+    // AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+</html>
