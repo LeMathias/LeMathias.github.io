@@ -44,6 +44,13 @@
                     background-size: 25px 25px, 25px 25px, 100% 100%;
                     background-attachment: fixed;">
                 <v-container class="text-center">
+                    <h2 class="d-block d-md-none" style="color:#b6beff; font-family: Arial; user-select: none;">
+                        <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                        <v-icon size="xsmall">mdi-space-invaders</v-icon>   
+                        Rika Cursors
+                        <v-icon size="xsmall">mdi-space-invaders</v-icon> 
+                        <v-icon size="xsmall">mdi-emoticon-devil</v-icon>
+                    </h2>
                     <!-- information -->
                     <v-row align="center" justify="center" style="margin-top:50px;">
                         <v-col cols="auto" data-aos="fade-right">  <!-- AOS -->
@@ -304,6 +311,9 @@
                                         <h4 style="color:#f27efd;">Aug. 31, 2025 - Version 1.0.0 Released</h4>
                                         <li>Added basic animation cursors</li>
                                     </v-card-text>
+                                    <v-card-actions class="justify-start">
+                                        <v-btn @click="showDialog[0] = false" text>Close</v-btn>
+                                    </v-card-actions>
                                 </v-card>
                             </v-dialog>
                         </v-col>
@@ -344,9 +354,9 @@
                                 </template>
                             </v-hover>
                             <v-dialog v-model="showDialog[1]" max-width="800">
-                                <v-stepper alt-labels :items="['Step 1', 'Step 2', 'Step 3', 'Step 4']" bg-color="#514476" height="500px">
+                                <v-stepper alt-labels :items="['Step 1', 'Step 2', 'Step 3', 'Step 4']" bg-color="#514476" height="675px">
                                     <template v-slot:item.1>
-                                        <v-card title="Download and Unzip" flat color="#514476" height="290px">
+                                        <v-card title="Download and Unzip" flat color="#514476" height="450px">
                                             <v-card-text>Download and unzip the files, 
                                             then move the folder into C:\Windows\Cursors.<br><br>
                                                 <div class="text-caption">
@@ -366,7 +376,7 @@
                                     </template>
                                         
                                     <template v-slot:item.2>
-                                        <v-card title="Settings" flat color="#514476" height="290px">
+                                        <v-card title="Settings" flat color="#514476" height="450px">
                                             <v-card-text>
                                                 Go to Settings → Devices → Mouse.
                                             </v-card-text>
@@ -378,7 +388,7 @@
                                     </template>
                                 
                                     <template v-slot:item.3>
-                                        <v-card title="Size Settings" flat color="#514476" height="290px">
+                                        <v-card title="Size Settings" flat color="#514476" height="450px">
                                             <v-card-text>
                                                 Click (Adjust mouse & cursor size). 
                                                 Here you can change the cursor size. 
@@ -395,7 +405,7 @@
                                     </template>
 
                                     <template v-slot:item.4>
-                                        <v-card title="Cursors Settings" flat color="#514476" height="290px">
+                                        <v-card title="Cursors Settings" flat color="#514476" height="450px">
                                             <v-card-text>
                                                 Return to Settings → Devices → Mouse, 
                                                 then click (Additional mouse options) 
@@ -485,4 +495,5 @@
 </script>
 
 </html>
+
 
